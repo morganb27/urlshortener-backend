@@ -29,8 +29,6 @@ public class UrlRedirectionController {
             headers.setLocation(URI.create(urlMapping.get().getLongUrl()));
             return new ResponseEntity<>(headers, HttpStatus.FOUND);
         }
-
         return ResponseEntity.notFound().build();
-
     }
 }
